@@ -1,0 +1,235 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Bonjour", "Salut", "Hey", "Bonjour, ça va ?", "Salut, tu es là ?"],
+      "responses": ["Bonjour ! Comment puis-je vous aider ?", "Salut ! Besoin d'aide avec votre véhicule ?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Au revoir", "Merci, à bientôt", "Bonne journée", "Bye"],
+      "responses": ["Merci pour votre visite ! À bientôt.", "Bonne journée et prenez soin de votre voiture !"]
+    },
+    {
+      "tag": "oil_change",
+      "patterns": ["Quand dois-je changer mon huile ?", "Entretien d'huile", "Huile moteur", "Changer l'huile"],
+      "responses": [
+        "Vous devriez changer votre huile tous les 10 000 km ou selon les recommandations du constructeur.",
+        "L'entretien d'huile est recommandé tous les 6 à 12 mois selon votre utilisation."
+      ]
+    },
+    {
+      "tag": "brake_issue",
+      "patterns": [
+        "Les freins de ma voiture font un bruit",
+        "Ma voiture freine mal",
+        "Problème de frein",
+        "Pourquoi mes freins grincent ?"
+      ],
+      "responses": [
+        "Un grincement peut indiquer que vos plaquettes de frein sont usées. Faites-les vérifier rapidement.",
+        "Si vous avez des difficultés à freiner, cela peut être lié à une fuite de liquide de frein ou des disques endommagés."
+      ]
+    },
+    {
+      "tag": "battery_issue",
+      "patterns": [
+        "Ma batterie est morte",
+        "Problème de batterie",
+        "Ma voiture ne démarre pas",
+        "Quand remplacer la batterie ?"
+      ],
+      "responses": [
+        "Une batterie doit généralement être remplacée tous les 3 à 5 ans.",
+        "Assurez-vous que les bornes de la batterie sont propres et bien connectées.",
+        "Si votre voiture ne démarre pas, essayez de vérifier l'état de charge de la batterie."
+      ]
+    },
+    {
+      "tag": "engine_noise",
+      "patterns": [
+        "Mon moteur fait un bruit étrange",
+        "Bruit dans le moteur",
+        "Pourquoi mon moteur claque ?",
+        "Bruit métallique dans ma voiture"
+      ],
+      "responses": [
+        "Un bruit métallique peut indiquer un problème avec les pistons ou les soupapes. Consultez un mécanicien.",
+        "Cela pourrait être dû à un manque d'huile ou à des pièces usées. Vérifiez le niveau d'huile."
+      ]
+    },
+    {
+      "tag": "tire_pressure",
+      "patterns": [
+        "Quelle est la pression idéale pour mes pneus ?",
+        "Mes pneus sont sous-gonflés",
+        "Pression des pneus",
+        "Gonfler les pneus"
+      ],
+      "responses": [
+        "La pression idéale est indiquée dans le manuel de votre véhicule ou sur l'étiquette de la porte conducteur.",
+        "En général, elle se situe entre 2,0 et 2,5 bars. Vérifiez avec un manomètre pour être précis."
+      ]
+    },
+    {
+      "tag": "engine_light",
+      "patterns": [
+        "Pourquoi le voyant moteur est allumé ?",
+        "Voyant moteur",
+        "Problème de voyant moteur",
+        "Le voyant moteur reste allumé"
+      ],
+      "responses": [
+        "Le voyant moteur peut s'allumer pour diverses raisons, comme un problème de capteur ou d'émissions. Consultez un diagnostic OBD-II.",
+        "Cela peut indiquer un problème sérieux. Consultez un mécanicien rapidement."
+      ]
+    },
+    {
+      "tag": "fuel_efficiency",
+      "patterns": [
+        "Comment améliorer la consommation de carburant ?",
+        "Ma voiture consomme beaucoup",
+        "Réduction de la consommation d'essence",
+        "Économie de carburant"
+      ],
+      "responses": [
+        "Pour améliorer l'efficacité, évitez les accélérations brusques, maintenez une pression correcte des pneus et faites les vidanges régulièrement.",
+        "Réduisez la charge inutile dans votre véhicule et respectez les limites de vitesse."
+      ]
+    },
+    {
+      "tag": "maintenance_schedule",
+      "patterns": [
+        "Quand faire la maintenance de ma voiture ?",
+        "Plan d'entretien de voiture",
+        "À quelle fréquence entretenir ma voiture ?",
+        "Maintenance régulière"
+      ],
+      "responses": [
+        "Une maintenance régulière est recommandée tous les 10 000 à 15 000 km ou tous les 6 à 12 mois.",
+        "Consultez le manuel de votre véhicule pour un plan d'entretien spécifique."
+      ]
+    },
+    {
+      "tag": "insurance",
+      "patterns": [
+        "Quels types d'assurances auto existent ?",
+        "Assurance automobile",
+        "Quelle assurance auto choisir ?"
+      ],
+      "responses": [
+        "Les principaux types sont : tiers, intermédiaire et tous risques. Choisissez en fonction de la valeur de votre véhicule et de vos besoins.",
+        "Pour un véhicule récent, une assurance tous risques est souvent préférable. Pour une voiture ancienne, l'assurance au tiers peut suffire."
+      ]
+    },
+    {
+      "tag": "road_safety",
+      "patterns": [
+        "Conseils pour une conduite sécurisée",
+        "Comment éviter les accidents ?",
+        "Règles de sécurité routière"
+      ],
+      "responses": [
+        "Respectez les limitations de vitesse, gardez une distance de sécurité et soyez attentif aux conditions climatiques.",
+        "Évitez les distractions comme l'utilisation du téléphone en conduisant."
+      ]
+    },
+    {
+      "tag": "emergency",
+      "patterns": [
+        "Que faire en cas de panne sur l'autoroute ?",
+        "Ma voiture est tombée en panne",
+        "Panne en urgence"
+      ],
+      "responses": [
+        "Allumez vos feux de détresse, garez-vous sur la bande d'arrêt d'urgence et sortez par le côté opposé à la circulation.",
+        "Appelez une assistance routière et signalez votre position avec un triangle de signalisation."
+      ]
+    },
+    {
+      "tag": "climate_control",
+      "patterns": [
+        "Ma climatisation ne fonctionne pas",
+        "Comment entretenir la climatisation ?",
+        "Problème avec la clim"
+      ],
+      "responses": [
+        "Faites vérifier le niveau de réfrigérant et nettoyez les filtres régulièrement.",
+        "Si la climatisation ne fonctionne pas, cela peut être dû à une fuite ou un compresseur défectueux."
+      ]
+    },
+    {
+      "tag": "used_car_tips",
+      "patterns": [
+        "Comment acheter une voiture d'occasion ?",
+        "Conseils pour l'achat d'une voiture d'occasion",
+        "Vérifications avant d'acheter une voiture"
+      ],
+      "responses": [
+        "Vérifiez l'historique du véhicule, son état mécanique, les factures d'entretien et faites un essai routier.",
+        "Consultez le contrôle technique récent et assurez-vous qu'il n'y a pas de vices cachés."
+      ]
+    },
+    {
+      "tag": "car_selling_tips",
+      "patterns": [
+        "Comment vendre ma voiture ?",
+        "Astuces pour vendre une voiture rapidement",
+        "Vendre une voiture"
+      ],
+      "responses": [
+        "Nettoyez et réparez votre voiture avant de la vendre. Fournissez les documents nécessaires comme le certificat de non-gage et le carnet d'entretien.",
+        "Fixez un prix juste en fonction de l'état et de la valeur du marché."
+      ]
+    },
+    {
+      "tag": "electric_vehicle",
+      "patterns": [
+        "Quels sont les avantages des voitures électriques ?",
+        "Acheter une voiture électrique",
+        "Comment recharger une voiture électrique ?"
+      ],
+      "responses": [
+        "Les voitures électriques sont silencieuses, économiques à l'usage et respectueuses de l'environnement.",
+        "Pour recharger, utilisez une borne publique, une borne domestique ou une prise murale standard."
+      ]
+    },
+    {
+      "tag": "winter_driving",
+      "patterns": [
+        "Comment préparer ma voiture pour l'hiver ?",
+        "Conseils de conduite en hiver",
+        "Pneus hiver obligatoires ?"
+      ],
+      "responses": [
+        "Installez des pneus hiver pour une meilleure adhérence, vérifiez votre batterie et utilisez un liquide lave-glace antigel.",
+        "Conduisez prudemment et augmentez la distance de sécurité sur route glissante."
+      ]
+    },
+    {
+      "tag": "car_noise",
+      "patterns": [
+        "Ma voiture fait un bruit bizarre",
+        "Pourquoi ma voiture grince ?",
+        "Bruit sous ma voiture"
+      ],
+      "responses": [
+        "Un grincement peut indiquer des suspensions usées, un problème d'échappement ou des roulements de roue à vérifier.",
+        "Faites diagnostiquer la source du bruit par un professionnel pour éviter des dommages supplémentaires."
+      ]
+    },
+    {
+      "tag": "warranty",
+      "patterns": [
+        "Ma voiture est-elle encore sous garantie ?",
+        "Que couvre une garantie automobile ?",
+        "Comment vérifier la garantie de ma voiture ?"
+      ],
+      "responses": [
+        "Consultez le carnet d'entretien ou contactez le concessionnaire pour vérifier la validité de la garantie.",
+        "La garantie couvre généralement les réparations liées à des défauts de fabrication pendant une période donnée ou un certain kilométrage."
+      ]
+    }
+
+  ]
+}
