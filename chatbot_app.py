@@ -12,6 +12,13 @@ from nltk.stem import WordNetLemmatizer
 from langchain_groq import ChatGroq
 import os
 
+# Télécharger les ressources NLTK si elles ne sont pas déjà installées
+try:
+    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('wordnet')
 
 # Initialisation de Streamlit
 st.title("🤖 Chatbot Expert Automobile")
