@@ -10,6 +10,7 @@ from keras.models import load_model
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from nltk.stem import WordNetLemmatizer
 from langchain_groq import ChatGroq
+import os
 
 
 # Initialisation de Streamlit
