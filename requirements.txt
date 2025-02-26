@@ -1,6 +1,6 @@
 streamlit
 transformers==4.49.0
 nltk
-tensorflow==2.15.0
+tensorflow
 torch==2.6.0
 langchain_groq
