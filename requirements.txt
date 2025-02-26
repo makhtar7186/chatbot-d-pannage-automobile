@@ -1,5 +1,5 @@
 streamlit
-tensorflow
+transformers==4.49.0
 nltk
 transformers
 torch
