@@ -12,13 +12,19 @@ from nltk.stem import WordNetLemmatizer
 from langchain_groq import ChatGroq
 import os
 
+
+# Définir un dossier personnalisé pour les ressources NLTK
+nltk_data_dir = os.path.join(os.path.expanduser("~"), "nltk_data")
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
+
 # Télécharger les ressources NLTK si elles ne sont pas déjà installées
 try:
     nltk.data.find('tokenizers/punkt')
     nltk.data.find('corpora/wordnet')
 except LookupError:
-    nltk.download('punkt')
-    nltk.download('wordnet')
+    nltk.download('punkt', download_dir=nltk_data_dir)
+    nltk.download('wordnet', download_dir=nltk_data_dir)
 
 # Initialisation de Streamlit
 st.title("🤖 Chatbot Expert Automobile")
