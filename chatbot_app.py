@@ -35,7 +35,7 @@ def load_components():
     llm_model = ChatGroq(
         temperature=0.3,
         model_name="mixtral-8x7b-32768",
-        api_key="api_key",
+        api_key=os.getenv("GROQ_API_KEY"),
     )
     return model, intents, words, classes, llm_model
 
