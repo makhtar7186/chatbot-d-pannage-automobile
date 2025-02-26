@@ -6,7 +6,7 @@ import json
 import pickle
 import nltk
 import time
-from tensorflow.keras.models import load_model  # <-- Utilisation de tens
+from tensorflow.keras.models import load_model  
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from nltk.stem import WordNetLemmatizer
 from langchain_groq import ChatGroq
@@ -30,9 +30,7 @@ except LookupError:
 st.title("🤖 Chatbot Expert Automobile")
 st.markdown("Posez-moi vos questions sur les problèmes mécaniques!")
 
-# Téléchargement des ressources NLTK
-nltk.download('punkt')
-nltk.download('wordnet')
+
 
 # Chargement des modèles et données
 @st.cache_resource
