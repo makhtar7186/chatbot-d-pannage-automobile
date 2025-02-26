@@ -6,7 +6,7 @@ import json
 import pickle
 import nltk
 import time
-from keras.models import load_model
+from tensorflow.keras.models import load_model  # <-- Utilisation de tens
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from nltk.stem import WordNetLemmatizer
 from langchain_groq import ChatGroq
