@@ -91,9 +91,9 @@ def chatbot_response(msg):
                         Nouvelle question : {msg}
 
                         Réponds en t'appuyant sur le contexte fourni. Si tu ne peux pas répondre précisément ou si la question dépasse tes compétences, indique : "Je ne sais pas." :"""
-                response= llm_model.invoke(prompt)
-                if isinstance(response, dict) and 'content' in response:
-                            return "OK"
+                response = llm_model.invoke(prompt)
+                if isinstance(response, dict):
+                    return response.get("content", "")
                 return response.content
             
     else:
@@ -108,8 +108,8 @@ def chatbot_response(msg):
 
         :"""
         response = llm_model.invoke(prompt)
-        if isinstance(response, dict) and 'content' in response:
-                    return "OK"
+        if isinstance(response, dict):
+            return response.get("content", "")
         return response.content
 
 # Interface utilisateur
