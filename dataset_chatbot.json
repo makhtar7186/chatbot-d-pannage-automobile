@@ -2,234 +2,434 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Bonjour", "Salut", "Hey", "Bonjour, ça va ?", "Salut, tu es là ?"],
-      "responses": ["Bonjour ! Comment puis-je vous aider ?", "Salut ! Besoin d'aide avec votre véhicule ?"]
+      "patterns": [
+        "Bonjour", "Salut", "Hey", "Bonjour ça va ?", "Salut, tu es là ?",
+        "Bonsoir", "Coucou", "Bonjour je besoin d'aide", "Hello", "Yo"
+      ],
+      "responses": [
+        "Bonjour ! Je suis AutoExpert, votre assistant automobile. Comment puis-je vous aider ?",
+        "Salut ! Besoin d'aide avec votre véhicule ? Je suis là pour ça.",
+        "Bonjour ! Posez-moi vos questions sur la mécanique, l'entretien ou la conduite."
+      ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Au revoir", "Merci, à bientôt", "Bonne journée", "Bye"],
-      "responses": ["Merci pour votre visite ! À bientôt.", "Bonne journée et prenez soin de votre voiture !"]
+      "patterns": [
+        "Au revoir", "Merci, à bientôt", "Bonne journée", "Bye", "À plus",
+        "C'est bon merci", "Merci pour ton aide", "Ciao", "À bientôt", "Salut bye"
+      ],
+      "responses": [
+        "Merci pour votre visite ! Bonne route et prenez soin de votre véhicule.",
+        "À bientôt ! N'hésitez pas à revenir si vous avez d'autres questions.",
+        "Bonne journée ! Conduisez prudemment."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Merci", "Super merci", "Merci beaucoup", "C'est parfait merci",
+        "Nickel merci", "Très utile merci", "Merci pour l'info"
+      ],
+      "responses": [
+        "Avec plaisir ! N'hésitez pas si vous avez d'autres questions.",
+        "Je suis ravi d'avoir pu vous aider !",
+        "De rien ! Votre sécurité sur la route est ma priorité."
+      ]
     },
     {
       "tag": "oil_change",
-      "patterns": ["Quand dois-je changer mon huile ?", "Entretien d'huile", "Huile moteur", "Changer l'huile"],
+      "patterns": [
+        "Quand dois-je changer mon huile ?", "Entretien d'huile", "Huile moteur",
+        "Changer l'huile", "Vidange moteur", "À quelle fréquence faire une vidange ?",
+        "Quel type d'huile utiliser ?", "Huile synthétique ou minérale ?",
+        "Mon huile est noire", "Niveau d'huile bas", "Fuite d'huile sous ma voiture",
+        "Voyant huile allumé"
+      ],
       "responses": [
-        "Vous devriez changer votre huile tous les 10 000 km ou selon les recommandations du constructeur.",
-        "L'entretien d'huile est recommandé tous les 6 à 12 mois selon votre utilisation."
+        "La vidange est recommandée tous les 10 000 à 15 000 km pour une huile synthétique, ou tous les 5 000 à 7 500 km pour une huile minérale.",
+        "Consultez le carnet d'entretien de votre véhicule pour la fréquence exacte. En général : tous les 6 à 12 mois selon l'utilisation.",
+        "Si le voyant huile s'allume, arrêtez-vous immédiatement et vérifiez le niveau. Continuer peut endommager irrémédiablement le moteur.",
+        "Pour le choix de l'huile, vérifiez la viscosité recommandée (ex: 5W-40) dans votre manuel. N'utilisez jamais une huile non conforme."
       ]
     },
     {
       "tag": "brake_issue",
       "patterns": [
-        "Les freins de ma voiture font un bruit",
-        "Ma voiture freine mal",
-        "Problème de frein",
-        "Pourquoi mes freins grincent ?"
+        "Les freins de ma voiture font un bruit", "Ma voiture freine mal",
+        "Problème de frein", "Pourquoi mes freins grincent ?", "Freins qui vibrent",
+        "Pédale de frein molle", "Voiture qui tire à gauche en freinant",
+        "Distance de freinage augmentée", "Disques de frein usés",
+        "Plaquettes de frein", "Liquide de frein", "Frein à main qui ne tient plus",
+        "Ma voiture s'arrête difficilement"
       ],
       "responses": [
-        "Un grincement peut indiquer que vos plaquettes de frein sont usées. Faites-les vérifier rapidement.",
-        "Si vous avez des difficultés à freiner, cela peut être lié à une fuite de liquide de frein ou des disques endommagés."
+        "Un grincement au freinage indique souvent des plaquettes usées. Faites-les vérifier immédiatement — c'est une question de sécurité.",
+        "Une pédale molle peut signaler une fuite de liquide de frein ou de l'air dans le circuit. Stoppez-vous et appelez un mécanicien.",
+        "Les disques de frein doivent être contrôlés tous les 30 000 km. Des vibrations au freinage indiquent souvent des disques voilés.",
+        "Le liquide de frein doit être changé tous les 2 ans ou 40 000 km, car il absorbe l'humidité et perd ses propriétés."
       ]
     },
     {
       "tag": "battery_issue",
       "patterns": [
-        "Ma batterie est morte",
-        "Problème de batterie",
-        "Ma voiture ne démarre pas",
-        "Quand remplacer la batterie ?"
+        "Ma batterie est morte", "Problème de batterie", "Ma voiture ne démarre pas",
+        "Quand remplacer la batterie ?", "Batterie déchargée", "Démarrage difficile le matin",
+        "Voiture qui ne démarre pas au froid", "Comment recharger une batterie ?",
+        "Quelle batterie choisir ?", "Durée de vie d'une batterie auto",
+        "Bornes de batterie oxydées", "Câbles de démarrage", "Booster une voiture"
       ],
       "responses": [
-        "Une batterie doit généralement être remplacée tous les 3 à 5 ans.",
-        "Assurez-vous que les bornes de la batterie sont propres et bien connectées.",
-        "Si votre voiture ne démarre pas, essayez de vérifier l'état de charge de la batterie."
+        "Une batterie auto dure en moyenne 3 à 5 ans. Si votre démarrage est difficile, faites tester sa capacité chez un garagiste.",
+        "Pour booster une voiture : branchez le rouge (+) sur le + de la batterie déchargée, puis le noir (-) sur une masse métallique de la voiture en panne.",
+        "Des bornes oxydées (dépôt blanc/bleu) peuvent empêcher le démarrage. Nettoyez-les avec du bicarbonate de soude et de l'eau.",
+        "Par grand froid, une batterie perd jusqu'à 50% de sa capacité. Préchauffez l'habitacle et évitez les accessoires énergivores au démarrage."
       ]
     },
     {
       "tag": "engine_noise",
       "patterns": [
-        "Mon moteur fait un bruit étrange",
-        "Bruit dans le moteur",
-        "Pourquoi mon moteur claque ?",
-        "Bruit métallique dans ma voiture"
+        "Mon moteur fait un bruit étrange", "Bruit dans le moteur",
+        "Pourquoi mon moteur claque ?", "Bruit métallique dans ma voiture",
+        "Moteur qui ronfle", "Claquement moteur", "Bruit de diesel au démarrage",
+        "Moteur qui vibre anormalement", "Sifflement moteur", "Cognement moteur",
+        "Bruit de courroie", "Courroie de distribution"
       ],
       "responses": [
-        "Un bruit métallique peut indiquer un problème avec les pistons ou les soupapes. Consultez un mécanicien.",
-        "Cela pourrait être dû à un manque d'huile ou à des pièces usées. Vérifiez le niveau d'huile."
+        "Un claquement métallique peut indiquer un manque de pression d'huile ou des composants usés. Arrêtez-vous et coupez le moteur.",
+        "Un sifflement peut venir d'une courroie accessoire usée ou d'une fuite d'admission. À vérifier rapidement.",
+        "La courroie de distribution doit être remplacée tous les 60 000 à 120 000 km selon le constructeur. Son rupture = moteur hors service.",
+        "Un bruit au démarrage qui disparaît après quelques secondes est souvent lié à un manque d'huile ou à un tendeur hydraulique défaillant."
       ]
     },
     {
       "tag": "tire_pressure",
       "patterns": [
-        "Quelle est la pression idéale pour mes pneus ?",
-        "Mes pneus sont sous-gonflés",
-        "Pression des pneus",
-        "Gonfler les pneus"
+        "Quelle est la pression idéale pour mes pneus ?", "Mes pneus sont sous-gonflés",
+        "Pression des pneus", "Gonfler les pneus", "Pneu à plat",
+        "Comment changer un pneu ?", "Pneu crevé", "Kit anti-crevaison",
+        "Quand changer les pneus ?", "Usure des pneus", "Profondeur des rainures",
+        "Pneus lisses", "Témoin d'usure"
       ],
       "responses": [
-        "La pression idéale est indiquée dans le manuel de votre véhicule ou sur l'étiquette de la porte conducteur.",
-        "En général, elle se situe entre 2,0 et 2,5 bars. Vérifiez avec un manomètre pour être précis."
+        "La pression recommandée est indiquée sur l'étiquette dans l'encadrement de porte conducteur ou dans le manuel. Elle varie entre 2,0 et 2,8 bars.",
+        "Les pneus doivent être changés quand les témoins d'usure (1,6 mm) sont atteints. En pratique, planifiez le remplacement à 3 mm pour la sécurité.",
+        "Pour changer un pneu crevé : serrez le frein à main, desserrez les boulons légèrement, levez le véhicule, échangez la roue, resserrez en étoile.",
+        "Vérifiez la pression tous les mois et avant chaque long trajet. Une pression incorrecte augmente la consommation et le risque de crevaison."
       ]
     },
     {
       "tag": "engine_light",
       "patterns": [
-        "Pourquoi le voyant moteur est allumé ?",
-        "Voyant moteur",
-        "Problème de voyant moteur",
-        "Le voyant moteur reste allumé"
+        "Pourquoi le voyant moteur est allumé ?", "Voyant moteur",
+        "Problème de voyant moteur", "Le voyant moteur reste allumé",
+        "Voyant orange tableau de bord", "Diagnostic OBD", "Code erreur voiture",
+        "Voyant check engine", "Voyant clignote", "Comment lire les codes défauts ?"
       ],
       "responses": [
-        "Le voyant moteur peut s'allumer pour diverses raisons, comme un problème de capteur ou d'émissions. Consultez un diagnostic OBD-II.",
-        "Cela peut indiquer un problème sérieux. Consultez un mécanicien rapidement."
+        "Le voyant moteur peut s'allumer pour de nombreuses raisons : capteur d'oxygène, catalyseur, bouchon de réservoir mal fermé, ou problème moteur sérieux.",
+        "Un diagnostic OBD-II (prise sous le tableau de bord) permet de lire les codes d'erreur. Des scanners abordables existent ou faites-le chez un garagiste.",
+        "Si le voyant clignote (pas fixe), c'est plus urgent : cela peut indiquer un raté d'allumage qui endommage le catalyseur. Réduisez la vitesse.",
+        "Ne l'ignorez pas trop longtemps. Un problème mineur non traité peut évoluer en panne coûteuse."
       ]
     },
     {
       "tag": "fuel_efficiency",
       "patterns": [
-        "Comment améliorer la consommation de carburant ?",
-        "Ma voiture consomme beaucoup",
-        "Réduction de la consommation d'essence",
-        "Économie de carburant"
+        "Comment améliorer la consommation de carburant ?", "Ma voiture consomme beaucoup",
+        "Réduction de la consommation d'essence", "Économie de carburant",
+        "Consommation anormale de carburant", "Voiture trop gourmande",
+        "Comment réduire ma consommation ?", "Conduite économique",
+        "Mon véhicule consomme plus qu'avant"
       ],
       "responses": [
-        "Pour améliorer l'efficacité, évitez les accélérations brusques, maintenez une pression correcte des pneus et faites les vidanges régulièrement.",
-        "Réduisez la charge inutile dans votre véhicule et respectez les limites de vitesse."
+        "Pour économiser du carburant : maintenez une vitesse constante, anticipez les freinages, et évitez les accélérations brusques.",
+        "Une augmentation soudaine de consommation peut indiquer un filtre à air bouché, des injecteurs encrassés ou des pneus sous-gonflés.",
+        "La conduite sur autoroute à 110 km/h au lieu de 130 km/h réduit la consommation de 20%. La climatisation augmente aussi la conso de 10 à 20%.",
+        "Videz votre coffre des objets inutiles : 100 kg supplémentaires = +0,5 L/100 km environ."
       ]
     },
     {
       "tag": "maintenance_schedule",
       "patterns": [
-        "Quand faire la maintenance de ma voiture ?",
-        "Plan d'entretien de voiture",
-        "À quelle fréquence entretenir ma voiture ?",
-        "Maintenance régulière"
+        "Quand faire la maintenance de ma voiture ?", "Plan d'entretien de voiture",
+        "À quelle fréquence entretenir ma voiture ?", "Maintenance régulière",
+        "Carnet d'entretien", "Révision voiture", "Faire une révision",
+        "Contrôle technique", "Quand passer au contrôle technique ?",
+        "Ma révision est-elle due ?"
       ],
       "responses": [
-        "Une maintenance régulière est recommandée tous les 10 000 à 15 000 km ou tous les 6 à 12 mois.",
-        "Consultez le manuel de votre véhicule pour un plan d'entretien spécifique."
+        "Une révision complète est recommandée tous les 15 000 à 30 000 km selon le constructeur. Elle inclut filtre à air, bougies, liquides et courroies.",
+        "Le contrôle technique est obligatoire tous les 2 ans pour les voitures de plus de 4 ans en France. Faites-le dans un centre agréé.",
+        "Un carnet d'entretien à jour augmente la valeur de revente de votre véhicule et assure sa fiabilité à long terme.",
+        "Les éléments à contrôler régulièrement : huile moteur, liquide de refroidissement, liquide de frein, courroies, pneumatiques, éclairages."
       ]
     },
     {
-      "tag": "insurance",
+      "tag": "cooling_system",
       "patterns": [
-        "Quels types d'assurances auto existent ?",
-        "Assurance automobile",
-        "Quelle assurance auto choisir ?"
+        "Mon moteur chauffe", "Température moteur élevée", "Voyant température allumé",
+        "Liquide de refroidissement", "Radiateur qui fuit", "Surchauffe moteur",
+        "Mon thermomètre moteur monte", "Vapeur sous le capot",
+        "Changer le liquide de refroidissement", "Thermostat défaillant"
       ],
       "responses": [
-        "Les principaux types sont : tiers, intermédiaire et tous risques. Choisissez en fonction de la valeur de votre véhicule et de vos besoins.",
-        "Pour un véhicule récent, une assurance tous risques est souvent préférable. Pour une voiture ancienne, l'assurance au tiers peut suffire."
+        "Si le voyant température s'allume, arrêtez-vous immédiatement. Continuer avec un moteur en surchauffe peut provoquer une casse moteur irréparable.",
+        "Attendez 30 minutes avant d'ouvrir le bouchon de radiateur. Ouvrir à chaud peut provoquer des brûlures graves par projection de vapeur.",
+        "Le liquide de refroidissement doit être changé tous les 2 à 5 ans. Utilisez toujours le type recommandé par le constructeur.",
+        "Une surchauffe répétée peut indiquer un joint de culasse fissuré, un thermostat bloqué ou un radiateur bouché."
+      ]
+    },
+    {
+      "tag": "suspension_steering",
+      "patterns": [
+        "Ma voiture penche d'un côté", "Problème de suspension", "Choc absorbeur usé",
+        "Voiture qui rebondit trop", "Direction qui tire", "Volant qui vibre",
+        "Bruit au passage de bosses", "Amortisseurs à changer", "Géométrie des roues",
+        "Parallélisme à régler", "Clonk sous la voiture", "Train avant bruyant"
+      ],
+      "responses": [
+        "Des amortisseurs usés augmentent la distance de freinage de 20% et réduisent la tenue de route. Faites-les contrôler tous les 80 000 km.",
+        "Un volant qui vibre à haute vitesse indique souvent un déséquilibrage des roues. L'équilibrage est une opération rapide et peu coûteuse.",
+        "Si votre voiture tire d'un côté, vérifiez d'abord la pression des pneus. Si c'est correct, un réglage de parallélisme est probablement nécessaire.",
+        "Un bruit de 'clonk' en virage ou sur bosses peut venir d'un rotule, silent-bloc ou cardan défaillant. À ne pas négliger."
+      ]
+    },
+    {
+      "tag": "electrical_issues",
+      "patterns": [
+        "Problème électrique dans ma voiture", "Fusible grillé", "Phares qui ne marchent plus",
+        "Essuie-glaces en panne", "Vitre électrique bloquée", "Autoradio qui s'éteint",
+        "Tableau de bord qui s'éteint", "Capteur qui flanche", "Alternateur",
+        "Voyant batterie allumé", "Court-circuit voiture"
+      ],
+      "responses": [
+        "Un voyant batterie allumé en roulant indique souvent un alternateur défaillant. Le moteur continuera de fonctionner sur la batterie, mais pas longtemps.",
+        "Pour un fusible grillé : localisez le boîtier à fusibles (manuel du véhicule), identifiez le fusible concerné et remplacez-le par un de même ampérage.",
+        "Les problèmes électriques intermittents sont souvent causés par une masse défaillante. Vérifiez les câbles de masse du moteur et de la carrosserie.",
+        "Ne court-circuitez jamais les fusibles avec du papier alu — cela risque d'enflammer votre véhicule."
+      ]
+    },
+    {
+      "tag": "transmission",
+      "patterns": [
+        "Boîte de vitesse qui saute", "Passage de vitesse difficile", "Embrayage qui patine",
+        "Pédale d'embrayage trop haute ou trop basse", "Voiture qui avance pas",
+        "Boîte automatique problème", "Choc à la montée en vitesse",
+        "Bruit en passant les vitesses", "Huile de boîte de vitesse",
+        "Transmission automatique qui glisse"
+      ],
+      "responses": [
+        "Un embrayage qui patine (régime monte mais vitesse n'augmente pas) est usé. À remplacer rapidement pour éviter d'endommager le volant moteur.",
+        "Pour une boîte manuelle, l'huile de boîte doit être vérifiée tous les 60 000 km. Une boîte qui 'craque' en 1ère ou en marche arrière indique une usure.",
+        "Sur boîte automatique, des à-coups au changement de rapport peuvent indiquer un niveau d'huile ATF bas ou un solénoïde défaillant.",
+        "L'embrayage dure généralement 150 000 à 200 000 km selon le style de conduite. La conduite en ville l'use plus vite."
+      ]
+    },
+    {
+      "tag": "air_conditioning",
+      "patterns": [
+        "Ma climatisation ne fonctionne pas", "Comment entretenir la climatisation ?",
+        "Problème avec la clim", "Clim qui souffle chaud", "Mauvaise odeur climatisation",
+        "Recharge de climatisation", "Clim qui fait du bruit", "Compresseur de clim",
+        "Désembuage de voiture", "Filtre d'habitacle à changer"
+      ],
+      "responses": [
+        "Si la clim souffle chaud, le gaz réfrigérant est probablement épuisé. Une recharge est nécessaire (tous les 2-3 ans en moyenne).",
+        "Une mauvaise odeur à la mise en marche de la clim indique un filtre d'habitacle encrassé ou des bactéries dans l'évaporateur. Changez le filtre.",
+        "Le filtre d'habitacle se change tous les 15 000 à 20 000 km. C'est une opération simple et peu coûteuse.",
+        "Pour éviter les mauvaises odeurs : laissez tourner la ventilation sans clim 2 minutes avant d'éteindre le moteur pour sécher l'évaporateur."
+      ]
+    },
+    {
+      "tag": "fuel_system",
+      "patterns": [
+        "Problème d'injection", "Moteur qui cale", "Voiture qui cale au ralenti",
+        "Filtre à carburant", "Injecteurs encrassés", "Pompe à carburant",
+        "Mauvaise qualité d'essence", "J'ai mis du diesel à la place d'essence",
+        "Carburant mélangé", "Ralenti instable", "Moteur qui toussote"
+      ],
+      "responses": [
+        "Si vous avez mélangé essence et diesel, NE DÉMARREZ PAS le moteur. Appelez immédiatement une dépanneuse pour vidanger le réservoir.",
+        "Le filtre à carburant se change tous les 30 000 à 60 000 km. Un filtre bouché entraîne un ralenti instable et une perte de puissance.",
+        "Des injecteurs encrassés peuvent être nettoyés avec un additif carburant ou en atelier. Les symptômes : toussotements, consommation en hausse.",
+        "Un moteur qui cale au ralenti peut indiquer un débit d'air faux, un capteur de position du papillon défaillant ou un ralenti mal réglé."
+      ]
+    },
+    {
+      "tag": "exhaust_system",
+      "patterns": [
+        "Pot d'échappement qui fuit", "Bruit d'échappement", "Fumée noire ou blanche",
+        "Catalyseur bouché", "FAP encrassé", "Filtre à particules",
+        "Voiture qui fume", "Gaz d'échappement à l'intérieur",
+        "Echappement qui tient plus", "Sonde lambda"
+      ],
+      "responses": [
+        "De la fumée blanche épaisse indique de l'eau dans la chambre de combustion (joint de culasse). De la fumée bleue = huile brûlée.",
+        "Le FAP (filtre à particules) se régénère seul sur autoroute. Si le voyant s'allume, faites un trajet de 30 min à régime moyen pour forcer la régénération.",
+        "Un catalyseur bouché réduit les performances et peut surchauffer. Ne jamais utiliser d'essence au plomb sur un moteur à catalyseur.",
+        "Si vous sentez des gaz d'échappement dans l'habitacle, roulez vitre ouverte et consultez un mécanicien immédiatement — risque d'intoxication."
+      ]
+    },
+    {
+      "tag": "safety_features",
+      "patterns": [
+        "Comment fonctionne l'ABS ?", "À quoi sert l'ESP ?", "Airbag déclenché",
+        "Voyant ABS allumé", "Voyant airbag allumé", "Régulateur de vitesse",
+        "Assistance au freinage d'urgence", "Aide au démarrage en côte",
+        "Capteur de stationnement", "Caméra de recul"
+      ],
+      "responses": [
+        "L'ABS empêche le blocage des roues au freinage. S'il se déclenche, maintenez une pression ferme sur la pédale — c'est normal.",
+        "L'ESP (contrôle de stabilité) intervient en cas de dérapage. Un voyant ESP allumé peut indiquer un capteur de vitesse de roue défaillant.",
+        "Le voyant airbag allumé signifie que le système est désactivé — vous n'êtes plus protégé en cas de choc. Consultez un professionnel.",
+        "Un airbag déclenché doit être remplacé par un professionnel. N'essayez jamais de manipuler un module airbag non déclenché."
+      ]
+    },
+    {
+      "tag": "windshield_wipers",
+      "patterns": [
+        "Essuie-glaces qui rayent", "Remplacer les balais d'essuie-glaces",
+        "Lave-glace vide", "Essuie-glaces qui grincent",
+        "Visibilité mauvaise sous la pluie", "Gicleurs de lave-glace bouchés"
+      ],
+      "responses": [
+        "Les balais d'essuie-glaces doivent être changés tous les 6 à 12 mois. Des balais usés rayent le pare-brise et réduisent la visibilité.",
+        "Pour des gicleurs bouchés, utilisez une aiguille fine pour déboucher l'orifice. Orientez-les vers le milieu du pare-brise.",
+        "En hiver, utilisez du liquide lave-glace antigel concentré. L'eau pure gèle dans les tubes et peut les faire éclater."
       ]
     },
     {
       "tag": "road_safety",
       "patterns": [
-        "Conseils pour une conduite sécurisée",
-        "Comment éviter les accidents ?",
-        "Règles de sécurité routière"
+        "Conseils pour une conduite sécurisée", "Comment éviter les accidents ?",
+        "Règles de sécurité routière", "Distance de sécurité",
+        "Conduite sous la pluie", "Aquaplaning", "Conduite dans le brouillard",
+        "Conduite de nuit", "Fatigue au volant", "Conduite sur verglas"
       ],
       "responses": [
-        "Respectez les limitations de vitesse, gardez une distance de sécurité et soyez attentif aux conditions climatiques.",
-        "Évitez les distractions comme l'utilisation du téléphone en conduisant."
+        "La distance de sécurité minimale est de 2 secondes par temps sec (comptez '1001, 1002' après le passage du véhicule devant vous devant un point fixe).",
+        "En cas d'aquaplaning (perte d'adhérence sur eau), ne freinez pas brutalement — relâchez l'accélérateur doucement et tenez le volant droit.",
+        "La fatigue cause 30% des accidents mortels sur autoroute. Faites une pause de 15 min toutes les 2 heures.",
+        "Sur verglas : doublez toutes vos distances, accélérez et freinez très progressivement, et n'accélérez pas dans les virages."
       ]
     },
     {
       "tag": "emergency",
       "patterns": [
-        "Que faire en cas de panne sur l'autoroute ?",
-        "Ma voiture est tombée en panne",
-        "Panne en urgence"
+        "Que faire en cas de panne sur l'autoroute ?", "Ma voiture est tombée en panne",
+        "Panne en urgence", "Accident de voiture", "Crevaison sur autoroute",
+        "Feu de voiture", "Voiture qui prend feu", "Comment appeler les secours ?",
+        "Numéro d'urgence panne"
       ],
       "responses": [
-        "Allumez vos feux de détresse, garez-vous sur la bande d'arrêt d'urgence et sortez par le côté opposé à la circulation.",
-        "Appelez une assistance routière et signalez votre position avec un triangle de signalisation."
-      ]
-    },
-    {
-      "tag": "climate_control",
-      "patterns": [
-        "Ma climatisation ne fonctionne pas",
-        "Comment entretenir la climatisation ?",
-        "Problème avec la clim"
-      ],
-      "responses": [
-        "Faites vérifier le niveau de réfrigérant et nettoyez les filtres régulièrement.",
-        "Si la climatisation ne fonctionne pas, cela peut être dû à une fuite ou un compresseur défectueux."
-      ]
-    },
-    {
-      "tag": "used_car_tips",
-      "patterns": [
-        "Comment acheter une voiture d'occasion ?",
-        "Conseils pour l'achat d'une voiture d'occasion",
-        "Vérifications avant d'acheter une voiture"
-      ],
-      "responses": [
-        "Vérifiez l'historique du véhicule, son état mécanique, les factures d'entretien et faites un essai routier.",
-        "Consultez le contrôle technique récent et assurez-vous qu'il n'y a pas de vices cachés."
-      ]
-    },
-    {
-      "tag": "car_selling_tips",
-      "patterns": [
-        "Comment vendre ma voiture ?",
-        "Astuces pour vendre une voiture rapidement",
-        "Vendre une voiture"
-      ],
-      "responses": [
-        "Nettoyez et réparez votre voiture avant de la vendre. Fournissez les documents nécessaires comme le certificat de non-gage et le carnet d'entretien.",
-        "Fixez un prix juste en fonction de l'état et de la valeur du marché."
-      ]
-    },
-    {
-      "tag": "electric_vehicle",
-      "patterns": [
-        "Quels sont les avantages des voitures électriques ?",
-        "Acheter une voiture électrique",
-        "Comment recharger une voiture électrique ?"
-      ],
-      "responses": [
-        "Les voitures électriques sont silencieuses, économiques à l'usage et respectueuses de l'environnement.",
-        "Pour recharger, utilisez une borne publique, une borne domestique ou une prise murale standard."
+        "Panne sur autoroute : feux de détresse, bande d'arrêt d'urgence, gilet jaune AVANT de sortir du véhicule, triangle à 50m, puis appelez le 15 ou le 112.",
+        "Feu de voiture : arrêtez-vous, coupez le moteur, évacuez immédiatement tous les passagers et éloignez-vous. N'ouvrez jamais le capot si de la fumée s'en échappe.",
+        "En cas d'accident : protégez, alertez (15/18/112), secourez. Ne déplacez pas un blessé sauf en cas de danger immédiat.",
+        "Sur les 1 800 bornes d'appel d'urgence sur autoroute, vous pouvez aussi utiliser votre téléphone en composant le 3117 (numéro d'urgence autoroutes)."
       ]
     },
     {
       "tag": "winter_driving",
       "patterns": [
-        "Comment préparer ma voiture pour l'hiver ?",
-        "Conseils de conduite en hiver",
-        "Pneus hiver obligatoires ?"
+        "Comment préparer ma voiture pour l'hiver ?", "Conseils de conduite en hiver",
+        "Pneus hiver obligatoires ?", "Antigel moteur", "Batterie en hiver",
+        "Dégivrer pare-brise", "Voiture qui patine dans la neige",
+        "Chaines à neige", "Pneus 4 saisons suffisants ?"
       ],
       "responses": [
-        "Installez des pneus hiver pour une meilleure adhérence, vérifiez votre batterie et utilisez un liquide lave-glace antigel.",
-        "Conduisez prudemment et augmentez la distance de sécurité sur route glissante."
+        "Depuis 2021, des pneus hiver ou 4 saisons sont obligatoires dans certaines zones montagneuses en France entre novembre et mars.",
+        "Préparez votre voiture pour l'hiver : vérifiez la batterie, l'antigel, les balais d'essuie-glaces et les pneus. Emportez un gratte-glace.",
+        "Les pneus hiver restent supérieurs aux 4 saisons sous 7°C, que la route soit enneigée ou non. Leur composition reste souple et adhère mieux.",
+        "Pour dégivrer le pare-brise : préchauffez votre véhicule ou utilisez un dégivrant. N'utilisez jamais d'eau chaude — risque de choc thermique."
       ]
     },
     {
-      "tag": "car_noise",
+      "tag": "used_car_buying",
       "patterns": [
-        "Ma voiture fait un bruit bizarre",
-        "Pourquoi ma voiture grince ?",
-        "Bruit sous ma voiture"
+        "Comment acheter une voiture d'occasion ?", "Conseils pour l'achat d'une voiture d'occasion",
+        "Vérifications avant d'acheter une voiture", "Contrôle avant achat VO",
+        "Histovec rapport voiture", "Kilométrage trafiqué", "Voiture accidentée comment le savoir",
+        "Garantie voiture occasion"
       ],
       "responses": [
-        "Un grincement peut indiquer des suspensions usées, un problème d'échappement ou des roulements de roue à vérifier.",
-        "Faites diagnostiquer la source du bruit par un professionnel pour éviter des dommages supplémentaires."
+        "Avant d'acheter une occasion : vérifiez le rapport Histovec (gratuit), faites un essai routier, contrôlez le carnet d'entretien et faites inspecter par un mécanicien.",
+        "Sur Histovec, le site officiel du gouvernement, vous pouvez vérifier le kilométrage déclaré, les sinistres déclarés et le statut administratif du véhicule.",
+        "Méfiez-vous d'un kilométrage trop bas pour l'âge du véhicule, d'une carrosserie récemment repeinte ou de vis d'entretien abîmées (indicateur d'intervention).",
+        "Une garantie légale de conformité de 2 ans s'applique aux achats chez un professionnel. Entre particuliers, aucune garantie n'est légalement obligatoire."
       ]
     },
     {
-      "tag": "warranty",
+      "tag": "car_selling",
       "patterns": [
-        "Ma voiture est-elle encore sous garantie ?",
-        "Que couvre une garantie automobile ?",
-        "Comment vérifier la garantie de ma voiture ?"
+        "Comment vendre ma voiture ?", "Astuces pour vendre une voiture rapidement",
+        "Vendre une voiture", "Prix de vente voiture", "Cote argus",
+        "Documents pour vendre une voiture", "Certificat de cession",
+        "Vendre à un concessionnaire ou particulier ?"
       ],
       "responses": [
-        "Consultez le carnet d'entretien ou contactez le concessionnaire pour vérifier la validité de la garantie.",
-        "La garantie couvre généralement les réparations liées à des défauts de fabrication pendant une période donnée ou un certain kilométrage."
+        "Pour vendre : obtenez le certificat de non-gage (gratuit sur service-public.fr), préparez le carnet d'entretien, le CT récent et le certificat de cession.",
+        "Consultez la cote Argus ou La Centrale pour estimer le prix. Tenez compte du kilométrage, de l'état et des options.",
+        "Un nettoyage complet intérieur/extérieur peut augmenter le prix de vente perçu de plusieurs centaines d'euros.",
+        "Vendre à un concessionnaire est plus rapide mais moins rentable (décote de 20-30%). La vente entre particuliers rapporte plus mais prend du temps."
+      ]
+    },
+    {
+      "tag": "electric_vehicle",
+      "patterns": [
+        "Quels sont les avantages des voitures électriques ?", "Acheter une voiture électrique",
+        "Comment recharger une voiture électrique ?", "Autonomie batterie électrique",
+        "Borne de recharge", "Voiture hybride ou électrique ?", "Entretien voiture électrique",
+        "Durée de vie batterie électrique", "Prime à la conversion",
+        "Coût de recharge voiture électrique"
+      ],
+      "responses": [
+        "Les voitures électriques ont moins d'entretien (pas de vidange, pas d'embrayage, moins de freins usés grâce au freinage régénératif).",
+        "Une recharge sur prise standard (3,7 kW) dure 8 à 12h. Sur Wallbox domestique (7-11 kW) : 4 à 6h. Sur borne rapide DC : 30 à 60 min.",
+        "La batterie d'une électrique perd en moyenne 2-3% de capacité par an. La plupart des constructeurs garantissent 70% de capacité sur 8 ans/160 000 km.",
+        "La prime à la conversion 2024 peut atteindre 6 000 à 7 000 € sous conditions de revenus pour l'achat d'un véhicule électrique neuf."
+      ]
+    },
+    {
+      "tag": "insurance",
+      "patterns": [
+        "Quels types d'assurances auto existent ?", "Assurance automobile",
+        "Quelle assurance auto choisir ?", "Assurance au tiers vs tous risques",
+        "Bonus malus", "Comment déclarer un sinistre ?", "Constat amiable",
+        "Franchise assurance", "Résiliation assurance auto"
+      ],
+      "responses": [
+        "Il existe 3 niveaux : tiers (responsabilité civile minimale), intermédiaire (vol, incendie, bris de glace) et tous risques (dommages tous accidents).",
+        "Pour un véhicule de moins de 5 ans ou financé à crédit, l'assurance tous risques est fortement recommandée.",
+        "Le bonus-malus : un sinistre responsable augmente votre cotisation de 25%. Sans sinistre : -5% par an jusqu'à -50% (coefficient 0.50).",
+        "En cas d'accident : remplissez le constat amiable le plus précisément possible. Vous avez 5 jours ouvrés pour déclarer le sinistre à votre assureur."
+      ]
+    },
+    {
+      "tag": "parking_urban",
+      "patterns": [
+        "Comment se garer en ville ?", "Stationnement payant", "PV de stationnement",
+        "Zone bleue disque", "Stationnement résidentiel", "Radar de recul",
+        "Créneau de stationnement", "Comment faire un créneau ?"
+      ],
+      "responses": [
+        "Pour réussir un créneau : alignez-vous à 50 cm du véhicule devant, reculez en braquant à fond, puis redressez quand votre roue arrière est proche du trottoir.",
+        "En zone bleue, le disque de stationnement doit être placé bien en vue derrière le pare-brise. Le stationnement est limité à 1h30 en général.",
+        "Depuis 2018, les amendes de stationnement (FPS) ne sont plus des amendes pénales mais des redevances. Le montant varie selon les communes."
+      ]
+    },
+    {
+      "tag": "car_washing",
+      "patterns": [
+        "Comment laver ma voiture ?", "Cire de voiture", "Protection carrosserie",
+        "Lavage à la main ou automatique ?", "Entretien intérieur voiture",
+        "Enlever les rayures", "Polissage voiture", "Nettoyer les jantes"
+      ],
+      "responses": [
+        "Le lavage à la main est moins abrasif pour la carrosserie. Utilisez deux seaux (un pour le savon, un pour rincer l'éponge) pour éviter les micro-rayures.",
+        "Appliquez une cire ou sealant tous les 3 à 6 mois pour protéger la peinture des UV, de la pluie acide et des contaminations.",
+        "Pour les petites rayures superficielles, un polish abrasif fin peut les atténuer. Les rayures profondes (jusqu'au métal) nécessitent une retouche peinture.",
+        "Nettoyez régulièrement l'intérieur : l'accumulation de poussière et de débris accélère l'usure des tissus et plastiques."
       ]
     }
-
   ]
 }

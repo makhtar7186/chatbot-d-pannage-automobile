@@ -4,3 +4,4 @@ nltk
 tensorflow==2.15.0
 torch==2.6.0
 langchain_groq
+python-dotenv
