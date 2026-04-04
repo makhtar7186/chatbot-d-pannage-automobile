@@ -1,6 +1,0 @@
-streamlit
-tensorflow
-nltk
-transformers
-torch
-langchain_groq
